@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorator="default">
+<head>
+    <title>Minted</title>
+    <!--<div layout:fragment="scripts">-->
+        <!--<script type="text/javascript" th:src="@{/js/moment.min.js}"></script>-->
+        <!--<script type="text/javascript" th:src="@{/app/js/instaView.js}"></script>-->
+    <!--</div>-->
+</head>
+<body>
+<div layout:fragment="content">
+
+    <div class="album py-5 bg-light">
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-12">
+
+                <div class="card mb-12 box-shadow">
+                    <div class="card-body">
+                        <!--<h4 class="jumbotron-heading"><strong>Latest Minted</strong></h4>-->
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Image URL</th>
+                                <td><a th:href="${image_url}" th:text="${image_url}"></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">IPFS Hash</th>
+                                <td th:text="${ipfs_hash}"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Minted On</th>
+                                <th th:text="${timestamp}"></th>
+                            </tr>
+                            <tr>
+                                <th scope="row">IPFS URL</th>
+                                <td><a th:href="${ipfs_url}" th:text="${ipfs_url}"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="access_token" th:value="${access_token}"></div>-->
+    <!--<div id="user_id" th:value="${user_id}"></div>-->
+    <!--<div id="media_id" th:value="${media_id}"></div>-->
+</div>
+</body>
+</html>

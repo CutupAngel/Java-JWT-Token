@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" th:href="@{/img/favicon.ico}">
+
+    <title>Mint The Gram</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/album.css}">
+
+    <section layout:fragment="styles"></section>
+
+</head>
+
+<body>
+    <div th:replace="common/header" th:remove="tag"></div>
+
+    <div id="ajaxLoader"></div>
+
+    <main role="main">
+        <div id="loaderWrapper" style="z-index: -1; opacity: 30">
+            <section layout:fragment="content" th:remove="tag">
+                <!-- page content -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right"> <a href="/">Back to top</a> </p>
+            <p>© Chainhaus</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/holder.min.js}"></script>
+    <script type="text/javascript" th:src="@{/app/js/utils.js}"></script>
+
+    <section layout:fragment="scripts"></section>
+
+</body>
+
+<script th:inline="javascript" >
+    var contextRoot = /*[[@{/}]]*/ '';
+    console.log("contextRoot :" + contextRoot);
+</script>
+
+</html>

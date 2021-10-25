@@ -1,0 +1,1 @@
+#ajaxLoader { opacity: 0.5; position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background: #333 url('/img/loading.gif') no-repeat center center; }
