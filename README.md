@@ -30,3 +30,5 @@ To stop server:
 
     pm2 stop mtg
 
+By CutupAngel.
+
